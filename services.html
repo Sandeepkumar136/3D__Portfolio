@@ -12,7 +12,7 @@
     <div class="topnav" id="myTopnav">
         <a href="./services.html" class="active">Services</a>
         <a href="./index.html">Portfolio</a>
-        <a href="#contact">Blogs</a>
+        <a href="blogbase.html">Blogs</a>
         <a href="#about">My gears</a>
         <a href="#" id="#theme-button about" onclick="toggleTheme()"><i class='bx bx-sun' id="theme-icon"></i> Theme</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -185,6 +185,44 @@
                                 visit</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <div class="heading-contents">
+            message here
+        </div>
+        <section>
+            <div class="form-container">
+                <div class="form-base-contain">
+                    <form action="#" method="post" id="form-1">
+                        <div class="label-config-form">
+                            <label for="name">
+                                <i class='bx bxs-user icon-form' >
+                                </i>
+                                name
+                            </label>
+                            <input type="text" name="name" id="name" placeholder="enter name" class="form-input">
+                        </div>
+                        <div class="label-config-form">
+                            <label for="name">
+                                <i class='bx bx-envelope icon-form' >
+                                </i>
+                                email
+                            </label>
+                            <input type="email" name="name" id="name" placeholder="enter email" class="form-input">
+                        </div>
+                    </form>
+                    <form action="#" method="post" id="form-1">
+                        <div class="label-config-form-2">
+                            <label for="name">
+                                <i class='bx bx-edit-alt icon-form' >
+                                </i>
+                                message
+                            </label>
+                            <textarea min="0" rows="5" cols="30" placeholder="Enter your message..!" name="textarea" class="name" id="textarea" required></textarea>
+                        </div>
+                        <a href="#" onclick="SendMail()" class="form-link">send</a>
+                    </form>
                 </div>
             </div>
         </section>
