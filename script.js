@@ -36,3 +36,17 @@ window.addEventListener("DOMContentLoaded",function(){
         updateButton(themeIcon, "dark");
     }
 });
+
+var i=0;
+var typing_text='Passionate frontend developer with a flair for creating visually appealing and user-friendly interfaces. Proven expertise in HTML, CSS, JavaScript, and responsive design. Exceptional problem-solving skills and a keen eye for detail.'
+var speed=15;
+
+
+function typewriter(){
+    if(i<typing_text.length){
+        document.getElementById("text-p-con").innerHTML += typing_text.charAt(i);
+        i++;
+        setTimeout(typewriter,speed);
+    }
+}
+typewriter()
