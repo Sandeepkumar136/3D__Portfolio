@@ -534,6 +534,7 @@ clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0% 100%)
     font-weight: 400;
     font-size: 1.2rem;
     opacity: 0.9;
+    text-transform: capitalize;
 }
 .logo-f{
     width: 50px;
@@ -591,6 +592,37 @@ clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0% 100%)
 }
 .footer-icons-f:hover{
     transform: scale(1.5);
+}
+@media only screen and (max-width: 944px) {
+    #f-footer{
+        padding: 2rem 1rem;
+        flex-direction: column;
+    }
+    .logo-f{
+        width: 45px;
+        height: 45px;
+    }
+    .f-prof-container{
+        text-wrap: nowrap;
+        gap: 0.2rem;
+        font-size: 1.2rem;
+    }
+    .f-base-contain{
+        flex-direction: column;
+    }
+    .f-cop-container{
+        font-size: 1rem;
+        opacity: 0.8;
+        text-transform: capitalize;
+    }
+    .f-tr-item{
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .f-base-container{
+        flex-direction: column;
+    }
+
 }
 // Services
 .serv-container{
@@ -659,57 +691,59 @@ clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0% 100%)
     color: #fff;
 }
 // Project Section
-.proj-base-contain{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.proj-contain{
-    width: 300px;
-    border-radius: 6px;
-    background-color: #698cff59;
-    padding: 6px;
-    margin: 0 0 10px 0;
+.ccc-base-contain{
+    width: 50%;
+    box-shadow: 0px 0px 2.5px 0.1px #333;
     display: flex;
     justify-content: start;
+    padding: 2rem;
     flex-direction: column;
+    background-color: #698cff59;
+    border-radius: 10px;
 }
-.heading-proj{
+@media only screen and (max-width: 768px) {
+    .ccc-base-contain{
+        width: 100%;
+    }
+    
+}
+.cc-heading-contain{
     font-family: 'poppins',sans-serif;
     font-weight: bold;
-    margin: 0 0 0 4px;
     font-size: 1.2rem;
     text-transform: capitalize;
+    display: flex;
+    justify-content: start;
+    margin: 0 auto auto 0;
+    text-wrap: nowrap;
 }
-.text-proj{
+.ccc-text-contain{
+    font-family: 'poppins',sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.ccc-link-contain{
+    display: flex;
+    justify-content: start;
+    margin: auto;
+    gap: 1rem;
+}
+.ccc-link{
     font-family: 'poppins',sans-serif;
     font-weight: 400;
     font-size: 1rem;
     text-transform: capitalize;
-}
-.button-base-proj{
     display: flex;
     justify-content: start;
-    gap: 0.5rem;
-    margin: auto;
-}
-.link-proj{
-    padding: 4px 15px;
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
+    gap: 0.3rem;
+    align-items: center;
     text-decoration: none;
-    font-family: 'poppins',sans-serif;
-    font-weight: 400;
-    font-size: 0.9rem;
-    text-transform: capitalize;
     color: #fff;
-    background-color: #003cff;
+    background-color: #0000ff;
+    padding: 5px 13px;
     border-radius: 8px;
 }
-.bx-tada{
-    font-size: 1.5rem;
-}
+
 // sign-up
 .form-base-contain{
     display: flex;
