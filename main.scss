@@ -927,6 +927,8 @@ clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0% 100%)
     display: flex;
     justify-content: start;
     gap: 0.5rem;
+    box-sizing: border-box;
+    margin-left: 1rem;
 }
 .blog-heading-icon{
     font-size: 2.5rem;
@@ -946,27 +948,44 @@ clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0% 100%)
     display: flex;
     justify-content: space-around;
     gap: 1rem;
-    border: 2px solid #000;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
 }
 .bb-base-contain{
     width: 50%;
     height: min-content;
-    border: 2px solid #000;
     background-color: #698cff59;
     border-radius: 10px;
     padding: 10px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.bb-config{
+    display: flex;
+    justify-content: start;
+    margin: auto 0;
+    padding: 1rem;
+    background-color: rgb(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.heading-config-bb{
+    font-family: 'poppins',sans-serif;
+    font-weight: 450;
+    font-size: 1.1rem;
 }
 .heading-base-contain-bb{
     display: flex;
     justify-content: start;
     gap: 0.5rem;
     align-items: center;
-    border: 2px solid #000;
 }
 .profile-logo-bb{
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    transition: 0.2s all;
 }
 .name-bb{
     text-transform: capitalize;
@@ -981,6 +1000,100 @@ clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0% 100%)
     opacity: 0.8;
     border-left: 2px solid #000;
     padding: 0 0 0 5px;
+}
+.text-contain-bb{
+    display: flex;
+    justify-content: start;
+    margin: auto 0;
+    padding: 1rem;
+    background-color: rgb(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.text-bb{
+    font-family: 'poppins',sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+.button-base-bb{
+    display: flex;
+    justify-content: start;
+    margin: auto 0;
+    align-items: center;
+    padding: 1rem;
+}
+.link-bb{
+    padding: 8px 16px;
+    display: flex;
+    justify-content: start;
+    margin: auto 0;
+    align-items: center;
+    gap: 0.3rem;
+    text-decoration: none;
+    font-family: 'poppins',sans-serif;
+    font-weight: 450;
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: #f9f9f9;
+    border-radius: 8px;
+    background-color: #003cff;
+    transition: 0.2s all;
+    position: relative;
+}
+.icon-bb{
+    font-size: 1.5rem;
+}
+.link-bb:hover{
+    // border: 2px solid #003cff;
+    background-color: #698cff59;
+    color: #0d0d0d;
+    font-size: 500;
+}
+@media only screen and (max-width: 768px) {
+    .bb-container{
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+    .bb-base-contain{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+}
+@media only screen and (max-width: 425px) {
+    .text-contain-bb{
+        border-bottom-right-radius: 0px;
+
+    }
+    .heading-base-contain-bb{
+        gap: 0.2rem;
+    }
+    .profile-logo-bb{
+        width: 35px;
+        height: 35px;
+    }
+    .name-bb{
+        font-size: 0.9rem;
+        text-wrap: nowrap;
+    }
+    .date-bb{
+        font-size: 0.9rem;
+    }
+    .text-bb{
+        font-size: 0.8rem;
+    }
+    .link-bb{
+        gap: 0.2rem;
+        font-size: 0.9rem;
+        padding: 7px 10px;
+    }
+    .icon-bb{
+        font-size: 1rem;
+    }
+    .heading-config-bb{
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
 }
 // gear section
 .g-base-main-container{
