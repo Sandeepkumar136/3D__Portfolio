@@ -205,6 +205,11 @@ body {
   margin-left: 4px;
 }
 
+@media only screen and (max-width: 768px) {
+  .heading-contents {
+    font-size: 1.2rem;
+  }
+}
 .heading-contents-p {
   font-size: 1.8rem;
   font-family: "poppins", sans-serif;
@@ -496,6 +501,7 @@ body {
   margin-top: 2rem;
   padding: 0.8rem 0.8rem;
   border-radius: 6px;
+  box-sizing: border-box;
 }
 
 .f-base-contain {
@@ -1549,5 +1555,200 @@ body {
 @media only screen and (max-width: 1024px) {
   .hover-container {
     display: none;
+  }
+}
+.b-b-1-container {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.heading-b-b-contain {
+  display: flex;
+  justify-content: start;
+  margin: auto 0;
+  box-sizing: border-box;
+  gap: 0.3rem;
+  padding: 1rem;
+  align-items: center;
+  width: 70%;
+  margin: 4px;
+  font-family: "poppins", sans-serif;
+  font-weight: 450;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.bx-paperclip {
+  font-size: 1.5rem;
+}
+
+.text-b-b-contain {
+  display: flex;
+  justify-content: start;
+  margin: auto 0;
+  width: 80%;
+  margin: 4px;
+  padding: 1rem;
+  font-family: "poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  border-radius: 10px;
+  background-color: rgba(105, 140, 255, 0.3490196078);
+}
+
+.code-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.pre-code {
+  overflow: auto;
+  background-color: rgba(105, 140, 255, 0.0274509804);
+  border-radius: 10px;
+  padding: 1rem;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+@media only screen and (max-width: 1018px) {
+  .heading-b-b-contain, .text-b-b-contain {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 5px 0;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .heading-b-b-contain {
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 2px 0;
+  }
+  .text-b-b-contain {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    border-bottom-right-radius: 0px;
+  }
+  .code {
+    font-size: 0.7rem;
+  }
+}
+.b-b-ul-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+.b-b-list-items {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: rgba(105, 140, 255, 0.3490196078);
+  padding: 1rem;
+  border-radius: 10px;
+  list-style-position: inside;
+}
+
+.b-b-items {
+  font-family: "poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .b-b-items {
+    font-size: 0.8rem;
+  }
+}
+.skills {
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.skill-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0d0d0d;
+  text-transform: uppercase;
+  margin: 20px 0;
+  font-family: "poppins", sans-serif;
+}
+
+.skill-bar {
+  height: 14px;
+  background: #282828;
+  border-radius: 3px;
+}
+
+.skill-per {
+  height: 14px;
+  background: #d13639;
+  border-radius: 3px;
+  position: relative;
+  animation: fillBars 2.5s 1;
+}
+
+.skill-per::before {
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background: #f1f1f1;
+  border-radius: 4px;
+  font-size: 12px;
+  top: -35px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.skill-per::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #f1f1f1;
+  top: -20px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  border-radius: 2px;
+}
+
+@keyframes fillBars {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.skill-config {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  background-color: rgba(105, 140, 255, 0.3490196078);
+  width: 50%;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  border-radius: 10px;
+}
+
+.dark-mode .skill-name {
+  color: #f9f9f9;
+}
+
+.dark-mode .skill-per {
+  color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+  .skill-config {
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */

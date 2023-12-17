@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="shortcut icon" href="./assets/FB_IMG_1652607151685-modified.svg" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active"><i class='bx bx-code-alt'></i>
+        Sandeep Kumar</a>
+        <a href="./services.html">Services</a>
+        <a href="blogbase.html">Blogs</a>
+        <a href="./gear.html">My gears</a>
+        <a href="#" id="#theme-button about" onclick="toggleTheme()"><i class='bx bx-sun' id="theme-icon"></i> Theme</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <main>
+    <section>
+        <div class="b-b-1-container">
+            <div class="heading-b-b-contain">
+                Mastering User Input: A Guide to Fixing Range in HTML Forms
+            </div>
+            <div class="text-b-b-contain">
+                <p class="text-b-b-base">
+                    In the realm of web development, crafting seamless and intuitive user experiences is paramount. HTML forms are a fundamental component of web interaction, and one essential aspect is controlling user input within a specified range. In this blog, we'll delve into the art of fixing input ranges in HTML forms, ensuring data accuracy and enhancing user satisfaction.
+                </p>
+            </div>
+        </div>
+        <div class="b-b-1-container">
+            <div class="heading-b-b-contain">
+                Understanding the Input Range Element
+            </div>
+            <div class="text-b-b-contain">
+                <p class="text-b-b-base">
+                    The input range (<input type="range">)
+                    element is a versatile tool that allows users to select a value from within a defined range by dragging a slider thumb. It's commonly used for selecting values like volume levels, screen brightness, or any numeric parameter.
+                </p>
+            </div>
+        </div>
+        <div class="b-b-1-container">
+            <div class="heading-b-b-contain">
+                Creating a Basic Range Input
+            </div>
+            <div class="text-b-b-contain">
+                <p class="text-b-b-base">
+                    Let's start by creating a simple range input element in an HTML form:
+                </p>
+            </div>
+        </div>
+        <div class="code-container">
+            <pre class="pre-code">
+                <code class="code">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        &lt;title&gt;Fixing Range in HTML Forms&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;form&gt;
+                            &lt;label for="volume"&gt;Volume:&lt;/label&gt;
+                            &lt;input type="range" id="volume" name="volume" min="0" max="100" value="50"&gt;
+                        &lt;/form&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+        </div>  
+        <div class="text-b-b-contain">
+            <p class="text-b-b-base">
+                In this example, we've created a range input for setting the volume, with a minimum value of 0, a maximum value of 100, and an initial value of 50.
+            </p>
+        </div>
+        <div class="b-b-1-container">
+            <div class="heading-b-b-contain">
+                Limiting User Input with "min" and "max" Attributes
+            </div>
+            <div class="text-b-b-contain">
+                <p class="text-b-b-base">
+                    The min and max attributes define the range limits for the input. Users can't select values outside this range. Here's an example that demonstrates this:
+                </p>
+            </div>
+        </div>
+        <div class="code-container">
+            <pre class="pre-code">
+                <code class="code">
+                    &lt;input type="range" id="brightness" name="brightness" min="0" max="255" value="128"&gt;
+                </code>
+            </pre>
+        </div>  
+        <div class="text-b-b-contain">
+            <p class="text-b-b-base">
+                In this case, the input range is for adjusting screen brightness, and users can only select values between 0 and 255.
+            </p>
+        </div>
+        <div class="b-b-1-container">
+            <div class="heading-b-b-contain">
+                Displaying the Chosen Value
+            </div>
+            <div class="text-b-b-contain">
+                <p class="text-b-b-base">
+                    You can display the chosen value from the range input dynamically. Let's use JavaScript to update the displayed value as the user interacts with the slider:
+                </p>
+            </div>
+        </div>
+        <div class="code-container">
+            <pre class="pre-code">
+                <code class="code">
+                    &lt;input type="range" id="temperature" name="temperature" min="0" max="100" value="25" oninput="updateTemperature()"&gt;
+        &lt;p&gt;Selected temperature: &lt;span id="temperatureValue"&gt;25&lt;/span&gt; °C&lt;/p&gt;
+
+        &lt;script&gt;
+            function updateTemperature() {
+                const temperatureInput = document.getElementById("temperature");
+                const temperatureValue = document.getElementById("temperatureValue");
+                temperatureValue.textContent = temperatureInput.value;
+            }
+        &lt;/script&gt;
+                </code>
+            </pre>
+        </div>  
+        <div class="text-b-b-contain">
+            <p class="text-b-b-base">
+                In this example, as the user moves the slider, the displayed temperature value is updated in real time.
+            </p>
+        </div>
+        <div class="b-b-1-container">
+            <div class="heading-b-b-contain">
+                Step: Fine-tuning Increments
+            </div>
+            <div class="text-b-b-contain">
+                <p class="text-b-b-base">
+                    The step attribute defines the increments by which the value changes as the slider moves. This is useful for fine-tuning. For instance:
+                </p>
+            </div>
+        </div>
+        <div class="code-container">
+            <pre class="pre-code">
+                <code class="code">
+                    &lt;input type="range" id="speed" name="speed" min="0" max="10" step="0.5" value="5"&gt;
+                </code>
+            </pre>
+        </div>  
+        <div class="text-b-b-contain">
+            <p class="text-b-b-base">
+                Here, the input's value can change in increments of 0.5, allowing more precise adjustments.
+            </p>
+        </div>
+        <div class="b-b-1-container">
+            <div class="heading-b-b-contain">
+                Conclusion
+            </div>
+            <div class="text-b-b-contain">
+                <p class="text-b-b-base">
+                    Fixing input ranges in HTML forms is an effective way to guide user input within predefined limits, enhancing both data accuracy and user experience. By utilizing attributes like min, max, step, and employing JavaScript to create interactive displays, you can create forms that are both user-friendly and functional. Whether you're creating a simple volume slider or a sophisticated input system, mastering the art of fixing range in HTML forms is a skill that adds an invaluable layer of control to your web applications.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+<footer id="f-footer">
+    <div class="f-base-contain">
+        <div class="f-prof-container">
+            <img src="./assets/FB_IMG_1652607151685.jpg" alt="footer-logo" class="logo-f">
+            Sandeep Kumar
+        </div>
+        <div class="f-cop-container">
+            copyright &copy; 2023 BLACKBOX.IO
+        </div>
+    </div>
+    <div class="f-base-container">
+       <div class="f-tr-contain">
+        <a href="#" class="link-tr-footer">FAQ</a>
+        <a href="#" class="link-tr-footer">Terms and conditions</a>
+       </div>
+       <div class="f-tr-contain">
+        <a href="#" class="link-tm-footer">
+            <i class="bx bxl-facebook footer-icon"></i>
+        </a>
+        <a href="#" class="link-tm-footer">
+            <i class="bx bxl-instagram footer-icon"></i>
+        </a>
+        <a href="#" class="link-tm-footer">
+            <i class="bx bxl-youtube footer-icon"></i>
+        </a>
+        <a href="#" class="link-tm-footer">
+            <i class="bx bxl-github footer-icon"></i>
+        </a>
+        <a href="#" class="link-tm-footer">
+            <i class="bx bxl-discord-alt footer-icon"></i>
+        </a>
+       </div>
+    </div>
+
+   </footer>
+
+<!-- script -->
+<script src="./script.js"></script>
+<script src="https://kit.fontawesome.com/e64361ea4f.js" crossorigin="anonymous"></script>
+</body>
+</html>

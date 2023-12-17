@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./main.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="./assets/FB_IMG_1652607151685-modified.svg" type="image/x-icon">
+
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active"><i class='bx bx-code-alt'></i>
+        Sandeep Kumar</a>
+        <a href="./services.html">Services</a>
+        <a href="blogbase.html">Blogs</a>
+        <a href="./gear.html">My gears</a>
+        <a href="#" id="#theme-button about" onclick="toggleTheme()"><i class='bx bx-sun' id="theme-icon"></i> Theme</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <main>
+        <!-- ##### -->
+        <section>
+            <div class="b-b-1-container">
+                <div class="heading-b-b-contain">
+                    Creating a Basic Linear Gradient
+                </div>
+                <div class="text-b-b-contain">
+                    <p class="text-b-b-base">
+                        Let's start by crafting a simple linear gradient background for an HTML element:
+                    </p>
+                </div>
+            </div>
+            <div class="code-container">
+                <pre class="pre-code">
+                    <code class="code">
+                        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;title&gt;CSS Linear Gradients&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div class="gradient-box"&gt;&lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+                    </code>
+                </pre>
+            </div>    
+            <div class="text-b-b-contain">
+                <p class="text-b-b-base">
+                    Now, in the styles.css file, let's apply a linear gradient to the .gradient-box element:
+                </p>
+            </div>
+            <div class="code-container">
+                <pre class="pre-code">
+                    <code class="code">
+                        /* styles.css */
+                        .gradient-box {
+                            width: 300px;
+                            height: 200px;
+                            background: linear-gradient(to bottom, #3498db, #e74c3c);
+                        }
+                    </code>
+                </pre>
+            </div>  
+            <div class="text-b-b-contain">
+                <p class="text-b-b-base">
+                    In this case, the gradient follows a 45-degree angle and incorporates three color stops: #3498db, #e74c3c, and #2ecc71.
+                </p>
+            </div>
+            <div class="code-container">
+                <pre class="pre-code">
+                    <code class="code">
+                        /* styles.css */
+.gradient-box {
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(to right, #3498db 0%, #e74c3c 50%, #2ecc71 100%);
+} 
+                    </code>
+                </pre>
+            </div>  
+            <div class="text-b-b-contain">
+                <p class="text-b-b-base">
+                    Here, the gradient shifts from #3498db to #e74c3c to #2ecc71 with color stops positioned at 0%, 50%, and 100% along the gradient line.
+                </p>
+            </div>
+            <div class="b-b-1-container">
+                <div class="heading-b-b-contain">
+                    Using Gradient Angles
+                </div>
+                <div class="text-b-b-contain">
+                    <p class="text-b-b-base">
+                        Changing the gradient angle can lead to intriguing effects. Let's see how an angle of 135 degrees alters the appearance:
+                    </p>
+                </div>
+            </div>
+            <div class="code-container">
+                <pre class="pre-code">
+                    <code class="code">
+                        /* styles.css */
+.gradient-box {
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(135deg, #3498db, #e74c3c);
+}     
+                    </code>
+                </pre>
+            </div>  
+            <div class="b-b-1-container">
+                <div class="heading-b-b-contain">
+                    Conclusion
+                </div>
+                <div class="text-b-b-contain">
+                    <p class="text-b-b-base">
+                        CSS linear gradients empower web designers to infuse their projects with sophistication and allure. From vibrant backgrounds to eye-catching text elements, the possibilities are limitless. By mastering the syntax, color stops, directions, and angles, you can create captivating visual experiences that captivate and engage users. Whether you're a seasoned developer or a newcomer, the art of linear gradients is a valuable addition to your creative toolkit. So, experiment, innovate, and elevate your web design endeavors with the captivating magic of CSS linear gradients.
+                    </p>
+                </div>
+            </div>
+    </section>
+        </main>
+        <footer id="f-footer">
+            <div class="f-base-contain">
+                <div class="f-prof-container">
+                    <img src="./assets/FB_IMG_1652607151685.jpg" alt="footer-logo" class="logo-f">
+                    Sandeep Kumar
+                </div>
+                <div class="f-cop-container">
+                    copyright &copy; 2023 BLACKBOX.IO
+                </div>
+            </div>
+            <div class="f-base-container">
+               <div class="f-tr-contain">
+                <a href="#" class="link-tr-footer">FAQ</a>
+                <a href="#" class="link-tr-footer">Terms and conditions</a>
+               </div>
+               <div class="f-tr-contain">
+                <a href="#" class="link-tm-footer">
+                    <i class="bx bxl-facebook footer-icon"></i>
+                </a>
+                <a href="#" class="link-tm-footer">
+                    <i class="bx bxl-instagram footer-icon"></i>
+                </a>
+                <a href="#" class="link-tm-footer">
+                    <i class="bx bxl-youtube footer-icon"></i>
+                </a>
+                <a href="#" class="link-tm-footer">
+                    <i class="bx bxl-github footer-icon"></i>
+                </a>
+                <a href="#" class="link-tm-footer">
+                    <i class="bx bxl-discord-alt footer-icon"></i>
+                </a>
+               </div>
+            </div>
+    
+           </footer>
+    
+      <!-- script -->
+      <script src="./script.js"></script>
+      <script src="https://kit.fontawesome.com/e64361ea4f.js" crossorigin="anonymous"></script>
+</body>
+</html>

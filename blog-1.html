@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./main.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="./assets/FB_IMG_1652607151685-modified.svg" type="image/x-icon">
+
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active"><i class='bx bx-code-alt'></i>
+        Sandeep Kumar</a>
+        <a href="./services.html">Services</a>
+        <a href="blogbase.html">Blogs</a>
+        <a href="./gear.html">My gears</a>
+        <a href="#" id="#theme-button about" onclick="toggleTheme()"><i class='bx bx-sun' id="theme-icon"></i> Theme</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <main>
+        <!-- ##### -->
+        <section>
+            <div class="b-b-1-container">
+                <div class="heading-b-b-contain">
+                    Enhancing User Experience: Creating a Unique Hover Effect for UL Links
+                </div>
+                <div class="text-b-b-contain">
+                    <p class="text-b-b-base">
+                        In the world of web development, creating a delightful user experience is paramount. One way to achieve this is by employing captivating hover effects that engage users and make navigation intuitive and visually appealing. In this blog, we'll delve into the creation of a unique hover effect for unordered list (UL) links that provides an interactive experience where hovering over one list item triggers hover effects for all other items except the one being hovered over.
+                    </p>
+                </div>
+            </div>
+                <div class="b-b-1-container">
+                    <div class="heading-b-b-contain">
+                        Understanding the Concept
+                    </div>
+                    <div class="text-b-b-contain">
+                        <p class="text-b-b-base">
+                            Before we dive into the technical implementation, let's understand the concept behind this hover effect. The idea is to create an effect where when a user hovers over a list item, all other list items in the unordered list get highlighted or animated, except for the item being hovered over. This effect adds a dynamic touch to the navigation, drawing the user's attention to their potential choices.
+                        </p>
+                    </div>
+            </div>
+            <div class="b-b-1-container">
+                <div class="heading-b-b-contain">
+                    HTML Structure
+                </div>
+                <div class="text-b-b-contain">
+                    <p class="text-b-b-base">
+                        Let's start by setting up the HTML structure for our unordered list and list items:
+                    </p>
+                </div>
+        </div>
+        <div class="code-container">
+            <pre class="pre-code">
+                <code class="code">
+                    &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;link rel="stylesheet" href="styles.css"&gt;
+                &lt;title&gt;Hover Effect for UL Links&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;ul class="hover-list"&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+                </code>
+            </pre>
+        </div>
+        <div class="b-b-1-container">
+            <div class="heading-b-b-contain">
+                CSS Magic
+            </div>
+            <div class="text-b-b-contain">
+                <p class="text-b-b-base">
+                    Now, let's create the CSS that makes the hover effect possible:
+                </p>
+            </div>
+    </div>
+    <div class="code-container">
+        <pre class="pre-code">
+            <code class="code">
+                /* styles.css */
+                .hover-list {
+                    list-style: none;
+                    padding: 0;
+                }
+                
+                .hover-list li {
+                    display: inline-block;
+                    margin-right: 15px;
+                }
+                
+                .hover-list li a {
+                    text-decoration: none;
+                    color: #333;
+                    position: relative;
+                }
+                
+                .hover-list li a::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #f39c12; /* Highlight color */
+                    bottom: -5px;
+                    left: 0;
+                    transform: scaleX(0); /* Initially hidden */
+                    transform-origin: right;
+                    transition: transform 0.3s ease-in-out;
+                }
+                
+                .hover-list li:hover a::before {
+                    transform: scaleX(1); /* Highlight grows as you hover */
+                    transform-origin: left;
+                }
+            </code>
+        </pre>
+    </div>
+<!-- ############## -->
+<div class="heading-contents">
+    How it works
+</div>
+<div class="b-b-ul-container">
+    <ol class="b-b-list-items">
+        <li class="b-b-items">The hover-list class styles the unordered list to remove default list styling and padding.</li>
+        <li class="b-b-items">The hover-list li styles each list item to be displayed inline-block with some margin for spacing.</li>
+        <li class="b-b-items">The hover-list li a styles the anchor links within the list items, setting the text color and creating a relative positioning context</li>
+        <li class="b-b-items">The hover-list li a::before adds an absolutely positioned pseudo-element that serves as the highlight effect, initially hidden (scaleX(0))</li>
+        <li class="b-b-items">On hover (hover-list li:hover a::before), the highlight effect grows from the right to the left, making it look as if it's following the user's cursor.</li>
+    </ol>
+</div>
+<div class="b-b-1-container">
+    <div class="heading-b-b-contain">
+        Conclusion
+    </div>
+    <div class="text-b-b-contain">
+        <p class="text-b-b-base">
+            By implementing this unique hover effect for unordered list links, you can enhance the user experience on your website. This effect draws attention to the available options while keeping the interaction visually engaging and dynamic. Remember, user experience is key, and small touches like hover effects can contribute significantly to a memorable and enjoyable browsing journey. So, why not give it a try and create an exceptional user experience today?
+        </p>
+    </div>
+</div>
+</section>
+    </main>
+    <footer id="f-footer">
+        <div class="f-base-contain">
+            <div class="f-prof-container">
+                <img src="./assets/FB_IMG_1652607151685.jpg" alt="footer-logo" class="logo-f">
+                Sandeep Kumar
+            </div>
+            <div class="f-cop-container">
+                copyright &copy; 2023 BLACKBOX.IO
+            </div>
+        </div>
+        <div class="f-base-container">
+           <div class="f-tr-contain">
+            <a href="#" class="link-tr-footer">FAQ</a>
+            <a href="#" class="link-tr-footer">Terms and conditions</a>
+           </div>
+           <div class="f-tr-contain">
+            <a href="#" class="link-tm-footer">
+                <i class="bx bxl-facebook footer-icon"></i>
+            </a>
+            <a href="#" class="link-tm-footer">
+                <i class="bx bxl-instagram footer-icon"></i>
+            </a>
+            <a href="#" class="link-tm-footer">
+                <i class="bx bxl-youtube footer-icon"></i>
+            </a>
+            <a href="#" class="link-tm-footer">
+                <i class="bx bxl-github footer-icon"></i>
+            </a>
+            <a href="#" class="link-tm-footer">
+                <i class="bx bxl-discord-alt footer-icon"></i>
+            </a>
+           </div>
+        </div>
+
+       </footer>
+
+
+
+      <!-- script -->
+      <script src="./script.js"></script>
+      <script src="https://kit.fontawesome.com/e64361ea4f.js" crossorigin="anonymous"></script>
+</body>
+</html>
