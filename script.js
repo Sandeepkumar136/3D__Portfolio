@@ -1,4 +1,3 @@
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -39,7 +38,7 @@ window.addEventListener("DOMContentLoaded",function(){
 
 var i=0;
 var typing_text='Passionate frontend developer with a flair for creating visually appealing and user-friendly interfaces. Proven expertise in HTML, CSS, JavaScript, and responsive design. Exceptional problem-solving skills and a keen eye for detail.'
-var speed=15;
+var speed=18;
 
 
 function typewriter(){
@@ -51,7 +50,7 @@ function typewriter(){
 }
 typewriter()
 
-
+// window.onload = typewriter;
 
 // #############
 function CopFun() {
@@ -126,3 +125,27 @@ function CopFune() {
         copyButton.innerHTML = "copylink";
     }, 4000);
 }
+
+
+// form
+function SendMail(){
+    var params={
+      name:document.getElementById('name').value,
+      email:document.getElementById('email').value,
+      message:document.getElementById('textarea').value
+    };
+    const ServiceID='service_3drrvkp';
+    const templeteID='template_yltr1bw';
+    emailjs.send(ServiceID,templeteID,params)
+    .then(
+      res => {
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('textarea').value = '';
+        console.log(res);
+        alert('Your messege sent successfully')
+      }
+      
+    )
+    .catch(err=>console.log(err));
+  };

@@ -217,14 +217,14 @@
                             <i class='bx bx-user icon-form' ></i>
                             enter name
                         </label>
-                        <input type="text" name="name" class="form-input" required placeholder="name">
+                        <input id="name" type="text" name="name" class="form-input" required placeholder="name">
                     </div>
                     <div class="form-base-orgin">
                         <label for="email" class="label-form">
                             <i class='bx bx-envelope icon-form' ></i>
                             enter email
                         </label>
-                        <input type="email" name="email" id="" class="form-input" placeholder="email" required>
+                        <input id="email" type="email" name="email" id="" class="form-input" placeholder="email" required>
                     </div>
                 </form>
                 <form action="#" class="form-2">
@@ -233,12 +233,12 @@
                             <i class='bx bx-message-square icon-form' ></i>
                             enter your message..!
                         </label>
-                        <textarea name="textarea" id="" cols="30" rows="7" class="input-form-2" placeholder="message" required></textarea>
+                        <textarea id="textarea" name="textarea" id="" cols="30" rows="7" class="input-form-2" placeholder="message" required></textarea>
                     </div>
                 </form>
-                <a href="#" class="button-submit">
+                <button title="Submit Form" href="#" onclick="SendMail()" type="submit" class="button-submit">
                     submit
-                </a>
+                </button>
                 <img src="./assets/4957160_Mail sent.svg" alt="Email" class="form-img">
             </div>
         </section>
@@ -255,23 +255,23 @@
         </div>
         <div class="f-base-container">
            <div class="f-tr-contain">
-            <a href="#" class="link-tr-footer">FAQ</a>
-            <a href="#" class="link-tr-footer">Terms and conditions</a>
+            <a href="#" title="FAQ" class="link-tr-footer">FAQ</a>
+            <a href="#" title="T&C" class="link-tr-footer">Terms and conditions</a>
            </div>
            <div class="f-tr-contain">
-            <a href="#" title="Facebook" class="link-tm-footer">
+            <a href="https://www.facebook.com/profile.php?id=100024229897494" target="_blank" title="Facebook" class="link-tm-footer">
                 <i class="bx bxl-facebook footer-icon"></i>
             </a>
-            <a href="#" title="Instagram" class="link-tm-footer">
+            <a href="https://www.instagram.com/sandeep_kumar136/" target="_blank" title="Instagram" class="link-tm-footer">
                 <i class="bx bxl-instagram footer-icon"></i>
             </a>
-            <a href="#" title="Youtube" class="link-tm-footer">
+            <a href="https://www.youtube.com/channel/UCO3tlbsKIjvEwr_uhbtNVdg" target="_blank" title="Youtube" class="link-tm-footer">
                 <i class="bx bxl-youtube footer-icon"></i>
             </a>
-            <a href="#" title="GitHub" class="link-tm-footer">
+            <a href="https://github.com/Sandeepkumar136" target="_blank" title="GitHub" class="link-tm-footer">
                 <i class="bx bxl-github footer-icon"></i>
             </a>
-            <a href="#" title="Discord" class="link-tm-footer">
+            <a href="https://discord.com/channelssandeeepkumar_70537" target="_blank" title="Discord" class="link-tm-footer">
                 <i class="bx bxl-discord-alt footer-icon"></i>
             </a>
            </div>
@@ -280,5 +280,12 @@
       <!-- script -->
       <script src="./script.js"></script>
       <script src="https://kit.fontawesome.com/e64361ea4f.js" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init("0lxK-ZCYi1JNKirrx");
+        })();
+      </script>
 </body>
 </html>

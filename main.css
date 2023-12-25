@@ -122,6 +122,7 @@ body {
   justify-content: space-evenly;
   flex-direction: column;
   padding: 0 0 0 1rem;
+  text-align: left;
 }
 
 .img-section-p-con-m {
@@ -145,6 +146,7 @@ body {
   display: flex;
   justify-content: start;
   margin: auto auto auto 0;
+  text-align: left;
 }
 
 .button-contain-p-con {
@@ -181,11 +183,18 @@ body {
 }
 
 @media only screen and (max-width: 1024px) {
+  .main-port-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
   .img-section-p-con-m {
     display: none;
   }
   .text-p-con-m {
     width: 100%;
+    padding: 0 0 0 0.2rem;
+    text-align: center;
   }
   .main-port-container {
     height: -moz-max-content;
@@ -666,6 +675,7 @@ body {
 
 .img-contain-serv {
   overflow: hidden;
+  border-radius: 15px;
 }
 
 .bx-info-circle {
@@ -922,15 +932,18 @@ body {
   font-weight: 450;
   font-size: 1.2rem;
   text-transform: capitalize;
-  padding: 8px 16px;
-  border-radius: 10px;
+  padding: 5px 20px;
+  border-radius: 6px;
   background-color: rgba(0, 0, 0, 0.1);
-  color: #000;
+  color: #fff;
+  background-color: #003cff;
   transition: 0.4s all;
+  border: none;
+  outline: none;
 }
 
 .button-submit:hover {
-  background-color: #003cff;
+  background-color: #3463ff;
   color: #fff;
 }
 
@@ -1199,11 +1212,29 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 0.5rem;
+  width: 33.3%;
 }
 
 .img-contain-shop {
   width: 100%;
   height: 50%;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.img-overlay-shop {
+  background-image: url(./assets/laptop.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: 0.4s all;
+  border-radius: 10px;
+}
+
+.img-overlay-shop:hover {
+  transform: scale(1.2);
 }
 
 .text-section-shop {
@@ -1259,13 +1290,6 @@ body {
   background-color: #0000ff;
 }
 
-.img-contain-shop {
-  background-image: url(./assets/laptop.jpg);
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-}
-
 .cvv-1 {
   background-image: url(./assets/keyboard.jpg);
 }
@@ -1274,6 +1298,93 @@ body {
   background-image: url(./assets/mouse.jpg);
 }
 
+.cvv3 {
+  background-image: url(./assets/hub.jpg);
+}
+
+.cvv4 {
+  background-image: url(./assets/pendrive.jpg);
+}
+
+.cvv5 {
+  background-image: url(./assets/ssd2.jpg);
+}
+
+.cvv6 {
+  background-image: url(./assets/headphone.jpg);
+}
+
+.cvv7 {
+  background-image: url(./assets/buds_image.jpg);
+}
+
+.cvv8 {
+  background-image: url(./assets/realme\ buds.jpg);
+}
+
+.cvv9 {
+  background-image: url(./assets/pad.jpg);
+}
+
+.cvv10 {
+  background-image: url(./assets/stand.jpg);
+}
+
+.cvv11 {
+  background-image: url(./assets/bag.jpg);
+}
+
+.cvv12 {
+  background-image: url(./assets/tab3.jpg);
+}
+
+.cvv13 {
+  background-image: url(./assets/codw.jpg);
+}
+
+.cvv14 {
+  background-image: url(./assets/oneplus_pcv02-1.jpg);
+}
+
+@media only screen and (max-width: 1024px) {
+  .button-contain-shop {
+    margin: auto;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 966px) {
+  .shop-main-container {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  .shop-base-contain {
+    width: 100%;
+    height: 550px;
+    background-color: rgba(105, 140, 255, 0.3490196078);
+    padding: 10px;
+    border-radius: 10px;
+    gap: 1rem;
+  }
+  .text-section-shop {
+    justify-content: space-evenly;
+    display: flex;
+  }
+  .button-contain-shop {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+  .link-shop {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    gap: 0.2rem;
+    padding: 5px 10px;
+    border-radius: 6px;
+    text-wrap: nowrap;
+  }
+}
 .testi-container-base {
   display: flex;
   justify-content: space-around;
