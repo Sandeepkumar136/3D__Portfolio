@@ -37,8 +37,8 @@ window.addEventListener("DOMContentLoaded",function(){
 });
 
 var i=0;
-var typing_text='Passionate frontend developer with a flair for creating visually appealing and user-friendly interfaces. Proven expertise in HTML, CSS, JavaScript, and responsive design. Exceptional problem-solving skills and a keen eye for detail.'
-var speed=18;
+var typing_text='Passionate frontend developer excelling in crafting visually captivating, user-friendly interfaces. Proficient in HTML, CSS, JavaScript, and responsive design. Demonstrates exceptional problem-solving abilities and meticulous attention to detail.'
+var speed=15;
 
 
 function typewriter(){
